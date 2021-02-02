@@ -176,7 +176,10 @@ bot.on('message', message => {
 
             if(!message.guild.voiceConnection) message.member.voice.channel.join().then(function(connection){
                 play(connection, message);
-            })
+            }).catch(error => {
+                message.reply('I was unable to kick the member.');
+                console.log(error);
+            });
 
     }
 })
