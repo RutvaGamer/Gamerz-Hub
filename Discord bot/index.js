@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 const ytdl = require("ytdl-core");
 
 
-const PREFIX = '/';
+const PREFIX = 'gh!';
 
 var servers = {};
 
