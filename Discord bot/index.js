@@ -23,13 +23,11 @@ bot.on('guildMemberAdd', member => {
     channel.send(`Welcome to our server, ${member}, please read the rules in the rules text channel.`)
 });
 
+js
 bot.on('message', message => {
     if (message.content === "Hello") {
         message.reply('Hello Friend!');
     }
-})
-
-bot.on('message', message => {
 
     if(!message.content.startsWith(PREFIX) || message.author.bot) return;
 
@@ -182,6 +180,6 @@ bot.on('message', message => {
             });
 
     }
-})
+});
 
 bot.login(process.env.token);
