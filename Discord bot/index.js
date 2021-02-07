@@ -31,7 +31,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    let args = message.content.substring(PREFIX.length).split(" ");
+    if(!message.content.startsWith(PREFIX) || message.author.bot) return;
 
     switch (args[0]) {
         case 'serverrules':
