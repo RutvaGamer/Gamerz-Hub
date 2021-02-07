@@ -27,11 +27,8 @@ bot.on('message', message => {
     if (message.content === "Hello") {
         message.reply('Hello Friend!');
     }
-})
-
-bot.on('message', message => {
-
-    if(!message.content.startsWith(PREFIX) || message.author.bot) return;
+if(!message.content.startsWith(PREFIX) || message.author.bot) return;
+const args = message.content.slice(prefix.length).split(/ +/);
 
     switch (args[0]) {
         case 'serverrules':
